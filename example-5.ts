@@ -1,19 +1,21 @@
 
-// This example has some tuples. 
-// These are arrays with mixed types. 
-// Define a tuple type for each. 
+// This example has some tuples.
+// These are arrays with mixed types.
+// Define a tuple type for each.
 // Add the types for the variables and function
 
-// Define the type for a tuple like this: 
+// Define the type for a tuple like this:
 // const things: [string, number]
 
 // https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types
 
-const snack1 = ['Cookies', 142]
-const snack2 = ['Avocado', 234]
-const snack3 = ['Banana', 105]
+type Nutrition = [string, number]
 
-function displayNutrition(food) {
+const snack1: Nutrition = ['Cookies', 142]
+const snack2: Nutrition = ['Avocado', 234]
+const snack3: Nutrition = ['Banana', 105]
+
+function displayNutrition(food: Nutrition): string {
   return `Item: ${food[0]} Calories: ${food[1]}`
 }
 
@@ -21,7 +23,7 @@ console.log(displayNutrition(snack1))
 console.log(displayNutrition(snack2))
 console.log(displayNutrition(snack3))
 
-// Compile the code and check what type script says: 
+// Compile the code and check what type script says:
 // tsc example-5.ts
 
 export {
