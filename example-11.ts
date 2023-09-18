@@ -1,11 +1,11 @@
-import Person, { Course, Student } from './example-10.js'
+import Person, { Course, Student, Cohort } from './example-10.js'
 
 
 // Amy, Bob, and Cat could be Person or Student
-// We need to add them all to an array of people. 
-// People can be either Person or Student. 
+// We need to add them all to an array of people.
+// People can be either Person or Student.
 
-// An interface describes features of a type. All 
+// An interface describes features of a type. All
 // tyoes that have those features fit the interface.
 
 // https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html#interfaces
@@ -13,18 +13,19 @@ import Person, { Course, Student } from './example-10.js'
 // Write an interface with name and age
 
 interface Human {
-
+	name: string
+	age: number
 }
 
-const amy: Human = new Student('Amy', 21)
+const amy: Human = new Student('Amy', 21, Cohort.Senior)
 const bob: Human = new Person('Bob', 32)
-const cat: Human = new Student('Cat', 43)
+const cat: Human = new Student('Cat', 43, Cohort.Junior)
 
-// Use the interface to make an array that 
-// holds both types: Person and Student 
+// Use the interface to make an array that
+// holds both types: Person and Student
 
 const allPeople: Human[] = [
-	amy, 
+	amy,
 	bob,
 	cat
 ]
