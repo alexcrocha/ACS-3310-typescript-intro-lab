@@ -1,7 +1,7 @@
 
-// Functions can be decribed as a type.
-// This happens when you need to pass a callback 
-// or have a function that returns another function. 
+// Functions can be described as a type.
+// This happens when you need to pass a callback
+// or have a function that returns another function.
 // Read about function type expressions:
 
 // https://www.typescriptlang.org/docs/handbook/2/functions.html#function-type-expressions
@@ -27,8 +27,8 @@ function next(arr) {
 	}
 }
 
-// This function returns a function that generates a 
-// die roll. 
+// This function returns a function that generates a
+// die roll.
 
 function dice(sides) {
 	return (n) => {
